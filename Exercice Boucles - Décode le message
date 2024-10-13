@@ -1,0 +1,265 @@
+// const userName = prompt("What's your name?");
+
+// if (userName === "Bob") {
+//   const userAge = prompt("How old are you?");
+//   if (parseInt(userAge) === 30) {
+//     console.log("Welcome");
+//   } else {
+//     console.log("Go away!");
+//   }
+// } else {
+//   console.log("Go Away!");
+// }
+
+// let userCountry = prompt("Where are you from");
+
+// switch (userCountry) {
+//   case "France":
+//     console.log("Bonjour");
+//     break;
+//   case "England":
+//     console.log("Hello");
+//     break;
+//   case "Germany":
+//     console.log("Hallo");
+//     break;
+//   case "Italy":
+//     console.log("Ciao");
+//     break;
+//   case "Spain":
+//     console.log("Hola");
+//     break;
+//   default:
+//     console.log("Hey there");
+//     break;
+// }
+
+// const today = new Date().getDay();
+
+// switch (today) {
+//   case 0:
+//     console.log("Dimanche");
+//     break;
+//   case 1:
+//     console.log("Lundi");
+//     break;
+//   case 2:
+//     console.log("Mardi");
+//     break;
+//   case 3:
+//     console.log("Mercredi");
+//     break;
+//   case 4:
+//     console.log("Jeudi");
+//     break;
+//   case 5:
+//     console.log("Vendredi");
+//     break;
+//   case 6:
+//     console.log("Samedi");
+//     break;
+// }
+
+// const animal = {
+//   name: "Lucky",
+//   species: "Cat",
+//   age: "3",
+// };
+
+// animal.name === "Lucky"
+//   ? console.log("Welcome Lucky!")
+//   : console.log("Wrong cat detected!");
+
+// // if (animal.name === "Lucky") {
+// //   console.log("Welcome Lucky!");
+// // } else {
+// //   console.log("Wrong Cat detected!");
+// // }
+
+// Exercice Conditions - Evaluer des variables
+
+// const billyTheCat = {
+//   name: "Billy",
+//   color: "Ginger",
+//   favouriteFoods: ["Lasagna", "Couscous", "Fish"],
+//   isHungry: false,
+//   meow: function () {
+//     console.log("Meooow");
+//   },
+// };
+
+// const selectedProperty = prompt(
+//   "What kind of property do you want to display?"
+// );
+
+// console.log(billyTheCat[selectedProperty]);
+
+// const apple = {
+//   color: "#00FF00",
+//   diameter: 10,
+//   isEaten: false,
+//   vitamins: ["A", "B1", "B2", "B6", "C"],
+//   variety: { code: 576, name: "Granny Smith" },
+//   gather: function () {
+//     return "Here's one apple!";
+//   },
+// };
+// console.log(apple.color);
+// console.log(apple["diameter"]);
+// console.log(apple.vitamins[2]);
+// console.log(apple.variety.name);
+// console.log(apple.gather());
+
+// const animals = [
+//   { name: "Billy", species: "Cat", sound: "Meow" },
+//   { name: "Sonic", species: "Hedgehog", sound: "Damn" },
+//   { name: "Simba", species: "Lion", sound: "Roar" },
+//   { name: "Quirell", species: "Squirrel", sound: "Skouik" },
+// ];
+// while
+// console.log(animals[0].color);
+
+// Welcome to Decode, your mission is to decode the full message. Good luck
+
+// EX 01 -  Use a loop to remove the 'X' and use console.log to reveal the message
+const hiddenMessage = [
+  "X",
+  "X",
+  "X",
+  "X",
+  "W",
+  "X",
+  "E",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "L",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "L",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  " ",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "D",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "O",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "N",
+  "X",
+  "X",
+  "X",
+  "X",
+  "E",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  ",",
+  "X",
+  " ",
+  "X",
+];
+
+// Your code goes here
+const decryptedCode = [];
+hiddenMessage.forEach(function (item) {
+  if (item !== "X") {
+    decryptedCode.push(item);
+  }
+});
+console.log(decryptedCode.join(""));
+
+// EX 02 - Remove the 'X' and the even numbers
+// Hint: As this is a string you should find a way to convert into an array.
+
+const hiddenCode =
+  "XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXXXX XXXXXXXXXXXXXXX:X0XXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3XXXXXX2XXXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX6XXXXXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXXXXXXXXX8XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX8XXXXXXXXXXX4XXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXX9XXXX9XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXX4XXXXXXXXXXX6XXXXXXXXX2XXXXXXXX3XXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXX";
+
+// Your code goes here
+const cryptedCode = hiddenCode.split("");
+const decryptedCode2 = [];
+
+cryptedCode.forEach(function (item) {
+  if (item !== "X" && item % 2 != 0) {
+    decryptedCode2.push(item);
+  }
+});
+console.log(decryptedCode2.join(""));
